@@ -1,0 +1,27 @@
+{
+	"name": "test-task-absgroup",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npx mix watch",
+		"build": "npx mix --production"
+	},
+	"keywords": [],
+	"author": "Ruslan Mirets",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "^2.27.10",
+		"browser-sync-webpack-plugin": "^2.3.0",
+		"clean-webpack-plugin": "^4.0.0",
+		"copy-webpack-plugin": "^11.0.0",
+		"filename-regex": "^2.0.1",
+		"imagemin-webpack-plugin": "^2.4.2",
+		"laravel-mix": "^6.0.49",
+		"laravel-mix-clean": "^0.1.0",
+		"laravel-mix-imagemin": "^1.0.3",
+		"mix-html-builder": "^0.9.0",
+		"sass": "^1.55.0",
+		"sass-loader": "^12.6.0"
+	}
+}
