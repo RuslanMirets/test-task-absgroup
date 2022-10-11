@@ -1,7 +1,53 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	font-family: inherit;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
 body {
-	font-family: 'OpenSans', sans-serif;
-	font-weight: 400;
+	font-family: 'Open Sans';
 	font-style: normal;
-	font-size: 16px;
-	line-height: 24px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 25px;
+	background-color: $body-color;
+	@media (max-width: 767px) {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1248px;
+	padding: 0 15px;
+	margin: 0 auto;
 }

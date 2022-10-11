@@ -1,4 +1,12 @@
+// Base
 @import 'vars';
 @import 'mixins';
 @import 'fonts';
 @import 'general';
+
+// Components
+@import './components/btn';
+@import './components/breadcrumbs';
+@import './components/products';
+@import './components/sidebar';
+@import './components/products-list';

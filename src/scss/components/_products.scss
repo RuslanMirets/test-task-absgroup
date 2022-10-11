@@ -1,0 +1,36 @@
+.products {
+	&__title {
+		font-weight: 300;
+		font-size: 50px;
+		line-height: 60px;
+		margin-bottom: 15px;
+		@media (max-width: 991px) {
+			font-size: 42px;
+			line-height: 46px;
+		}
+		@media (max-width: 767px) {
+			font-size: 34px;
+			line-height: 36px;
+		}
+	}
+	&__quantity {
+		color: $gray-color;
+		margin-bottom: 47px;
+		@media (max-width: 767px) {
+			margin-bottom: 30px;
+		}
+	}
+	&__body {
+		display: flex;
+		align-items: flex-start;
+		gap: 30px;
+		@media (max-width: 991px) {
+			align-items: initial;
+			flex-direction: column;
+		}
+	}
+	&__items {
+		background-color: cadetblue;
+		flex: 1 1 100%;
+	}
+}

@@ -1,0 +1,38 @@
+.breadcrumbs {
+	padding: 43px 0 16px;
+	@media (max-width: 575px) {
+		padding-top: 20px;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		&-item {
+			position: relative;
+			font-size: 14px;
+			line-height: 20px;
+			color: $text-color;
+			padding: 2px 0;
+			&:not(:last-child) {
+				color: $gray-color;
+				padding-right: 29px;
+				margin-right: 5px;
+				a {
+					transition: color 0.3s;
+					&:hover {
+						color: $text-color;
+					}
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					background-image: url('../images/icons/arrow-right.svg');
+					width: 24px;
+					height: 24px;
+					top: 0;
+					right: 0;
+				}
+			}
+		}
+	}
+}

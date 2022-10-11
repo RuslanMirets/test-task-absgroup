@@ -33,13 +33,56 @@
 		<link rel="stylesheet" href="/css/main.css" />
 	</head>
 	<body>
-		<h1>HOME</h1>
-		<div>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus,
-			ratione! Magni dolorum sit maiores, quam mollitia accusamus obcaecati?
-			Debitis labore omnis iure dignissimos nobis sequi adipisci eveniet
-			nesciunt modi quas!
-		</div>
+		<main>
+			<button onclick="AddRecord()">AddRecord()</button>
+			<section class="breadcrumbs">
+				<div class="container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__list-item"><a href="#">Главная</a></li>
+						<li class="breadcrumbs__list-item"><a href="#">Каталог</a></li>
+						<li class="breadcrumbs__list-item">Для легковых автомобилей</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="products">
+				<div class="container">
+					<h1 class="products__title h1">
+						Масла Mobil для легковых автомобилей
+					</h1>
+					<div class="products__quantity">Найдено 150 товаров</div>
+					<div class="products__body">
+						<aside class="products__sidebar sidebar">
+							<div class="sidebar__items">
+								<div class="sidebar__item">
+									<div class="sidebar__item-title sidebar__item-title--catalog">
+										Каталог
+									</div>
+									<div class="sidebar__item-body">
+										<ul class="sidebar__item-list sidebar__item-list--catalog">
+											<li class="active"><a href="#">Для легковых авто</a></li>
+											<li><a href="#">Для грузовых авто</a></li>
+											<li><a href="#">Технические жидкости</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="sidebar__item">
+									<div
+										class="sidebar__item-title sidebar__item-title--cart"
+									></div>
+									<div class="sidebar__item-body sidebar__item-body--cart">
+										<ul
+											class="sidebar__item-list sidebar__item-list--cart"
+										></ul>
+									</div>
+								</div>
+							</div>
+						</aside>
+						<div class="products__list products-list"></div>
+					</div>
+				</div>
+			</section>
+		</main>
 
 		<script src="/js/main.js"></script>
 	</body>
