@@ -20,7 +20,7 @@ mix.sass('./src/scss/main.scss', 'css').options({
 	processCssUrls: false,
 });
 
-mix.js('./src/js/main.js', 'js');
+mix.js(['./src/js/main.js', './src/js/data.js'], 'js');
 
 mix.copy('./src/fonts/*.woff2', 'dist/fonts');
 

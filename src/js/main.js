@@ -1,37 +1,5 @@
-const products = [
-	{
-		id: 1,
-		name: '11111111111111 1111111111',
-		img: '/images/product-01.png',
-	},
-	{
-		id: 2,
-		name: '222222222 222222222222222',
-		img: '/images/product-02.png',
-	},
-	{
-		id: 3,
-		name: 'Очень длинное название очень длинное название очень длинное название очень длинное название',
-		img: '/images/product-03.png',
-	},
-	{
-		id: 4,
-		name: 'Масло моторное Mobil 1 ESP 5W-30',
-		img: '/images/product-01.png',
-	},
-	{
-		id: 5,
-		name: 'Масло моторное Mobil 1 ESP 5W-30',
-		img: '/images/product-02.png',
-	},
-	{
-		id: 6,
-		name: 'Масло моторное Mobil 1 ESP 5W-30',
-		img: '/images/product-03.png',
-	},
-];
+import { products, cartItems } from './data.js';
 
-const cartItems = [];
 let quantity = cartItems.length;
 
 const pluralize = (n, forms) => {
@@ -42,20 +10,20 @@ const pluralize = (n, forms) => {
 		: forms[2];
 };
 
-const getProductItem = ({ id, name, img }) => `
+const getProductItem = ({ id, name, img, href }) => `
 <div class="products-list__item">
 	<a class="products-list__item-img" href="#">
 		<img src="${img}" alt="product-01" />
 	</a>
-	<h3 class="products-list__item-title"><a href="#">${name}</a></h3>
+	<h3 class="products-list__item-title"><a href="${href}">${name}</a></h3>
 	<div class="products-list__item-action">
-		<button class="btn" onClick="addToCart(${id}, '${name}')" data-id='${id}'>В корзину</button>
+		<button class="btn" onClick="addToCart(${id}, '${name}', '${href}')" data-id='${id}'>В корзину</button>
 	</div>
 </div>`;
 
-const getCartItem = ({ id, name }) =>
+const getCartItem = ({ id, name, href }) =>
 	`<li>
-		<a href="#">${name}</a>
+		<a href="${href}">${name}</a>
 		<button onClick="removeFromCart(${id})">
 			<img src="/images/icons/close.svg" alt="Удалить" />
 		</button>
@@ -79,10 +47,10 @@ const changeButton = (id, text, classAction) => {
 	classAction === 'remove' && button.classList.remove('disabled');
 };
 
-window.addToCart = function (id, name) {
+window.addToCart = function (id, name, href) {
 	const index = cartItems.findIndex((item) => item.id === id);
 	if (index === -1) {
-		cartItems.push({ id: id, name: name });
+		cartItems.push({ id: id, name: name, href: href });
 		changeButton(id, 'В корзине', 'add');
 		render(cartItems, ++quantity);
 	}

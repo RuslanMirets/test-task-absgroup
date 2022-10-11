@@ -74,6 +74,7 @@
 			font-weight: 400;
 			font-size: 18px;
 			line-height: 25px;
+			word-break: break-word;
 			transition: color 0.3s;
 			&:hover {
 				color: $accent-color;
